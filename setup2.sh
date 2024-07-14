@@ -29,7 +29,7 @@ MYIP=$(curl -sS ifconfig.me )
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="2145515560:AAE9WqfxZzQC-FYF1VUprICGNomVfv6OdTU"
+KEY="7298504307:AAH2CFQtKwKpEVfgjv2tZI9h_n4v12jJcEo"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 REPO="https://raw.githubusercontent.com/benzvpn/VPN/main/"
 APT="apt-get -y install "
@@ -143,7 +143,7 @@ function pasang_ssl() {
     mkdir /root/.acme.sh
     systemctl stop $STOPWEBSERVER
     systemctl stop nginx
-    curl https://raw.githubusercontent.com/NevermoreSSH/VVV/main/acme.sh -o /root/.acme.sh/acme.sh
+    curl https://raw.githubusercontent.com/benzvpn/VPN/main/acme.sh -o /root/.acme.sh/acme.sh
     chmod +x /root/.acme.sh/acme.sh
     /root/.acme.sh/acme.sh --upgrade --auto-upgrade
     /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
